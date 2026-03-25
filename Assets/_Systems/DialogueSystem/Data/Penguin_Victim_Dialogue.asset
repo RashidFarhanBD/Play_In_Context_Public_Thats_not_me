@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07980d68a72c8ac4ebe7617e3f5c2772, type: 3}
   m_Name: Penguin_Victim_Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  dialogueID: 1
-  startNode: {fileID: 11400000, guid: 91735fa026bba8a4fa14914f5327e060, type: 2}
-  nodes:
+  DialogueID: 
+  StartNode: {fileID: 11400000, guid: 91735fa026bba8a4fa14914f5327e060, type: 2}
+  Nodes:
   - {fileID: 0}

@@ -33,6 +33,11 @@ public static class StringExtensions
 
         return stringBuilder.ToString();
     }
+
+    public static string SpacesToUnderline(this string value)
+    {
+        return value.Replace(" ", "_");
+    }
 }
 
 public static class VectorExtensions

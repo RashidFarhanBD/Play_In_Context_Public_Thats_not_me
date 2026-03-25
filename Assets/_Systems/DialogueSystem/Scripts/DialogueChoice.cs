@@ -3,8 +3,16 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DialogueChoice
 {
-    public string text;
-    public DialogueNode nextNode;
+    public string Text;
+    public DialogueNode NextNode;
+    public bool IsLocked;
+    public PenguinData PenguinData;
+    public List<DialogueEvent> Events;
+}
 
-    public List<DialogueEvent> events;
+public struct OptionContext
+{
+    public string OptionDisplayText;
+    public string PenguinDescription;
+    public bool IsLockedByDefault;
 }

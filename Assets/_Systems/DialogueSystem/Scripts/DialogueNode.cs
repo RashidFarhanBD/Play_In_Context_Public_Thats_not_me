@@ -5,11 +5,11 @@ using UnityEngine;
 public class DialogueNode : ScriptableObject
 {
 
-    public string speaker;
+    public string PenguinId;
     [TextArea]
-    public string text;
+    public string Text;
 
-    public List<DialogueChoice> choices;
+    public List<DialogueChoice> Choices;
 
-    public DialogueNode nextNode;
+    public DialogueNode NextNode;
 }
