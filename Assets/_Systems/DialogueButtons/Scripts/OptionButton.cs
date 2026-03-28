@@ -1,24 +1,16 @@
-using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class OptionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
+public class OptionButton : ContextButtonBase<OptionContext>
 {
-    [SerializeField] private TMP_Text _displayTextRef;
     [SerializeField] private GameObject _lockIcon;
     [SerializeField] private bool _isLocked;
 
-    private Action _onOptionChosen;
-    private OptionContext _optionContext;
-
-    public void Initialize(OptionContext optionContext, Action actionOnChoose)
+    public override void Initialize(OptionContext optionContext)
     {
-        _optionContext = optionContext;
-        _onOptionChosen = actionOnChoose;
+        base.Initialize(optionContext);
 
         gameObject.SetActive(true);
-        _displayTextRef.SetText(_optionContext.OptionDisplayText);
 
         if (optionContext.IsLockedByDefault)
         {
@@ -34,6 +26,8 @@ public class OptionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         _isLocked = true;
         _lockIcon.SetActive(true);
+
+        SearchPanel.Instance.RegisterPenguin(_context.PenguinData, UnlockOption);
     }
 
     private void UnlockOption()
@@ -42,35 +36,33 @@ public class OptionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         _lockIcon.SetActive(false);
     }
 
-    public void Deinitialize()
+    public override void Deinitialize()
     {
-        _onOptionChosen = null;
+        base.Deinitialize();
         gameObject.SetActive(false);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public override void OnPointerDown(PointerEventData eventData)
     {
+        RaiseButtonPressedEvent();
         transform.localScale = Vector3.one * 0.7f;
-        Debug.Log("Down");
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public override void OnPointerUp(PointerEventData eventData)
     {
+        RaiseButtonReleasedEvent();
         transform.localScale = Vector3.one;
-        Debug.Log("Released");
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public override void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Clicked");
-
         if (_isLocked)
         {
-            GameEvent.RaiseLockedOptionClickedEvent(_optionContext);
+            GameEvent.RaiseLockedOptionClickedEvent(_context);
         }
         else
         {
-            _onOptionChosen?.Invoke();
+            RaiseButtonClickedEvent();
         }
     }
 }

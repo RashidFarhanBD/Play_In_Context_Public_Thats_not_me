@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueNode : ScriptableObject
 {
 
-    public string PenguinId;
+    public PenguinData PenguinData;
     [TextArea]
     public string Text;
 

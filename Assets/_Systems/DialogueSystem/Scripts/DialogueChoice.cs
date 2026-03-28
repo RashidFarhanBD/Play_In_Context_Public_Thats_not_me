@@ -9,10 +9,3 @@ public class DialogueChoice
     public PenguinData PenguinData;
     public List<DialogueEvent> Events;
 }
-
-public struct OptionContext
-{
-    public string OptionDisplayText;
-    public string PenguinDescription;
-    public bool IsLockedByDefault;
-}

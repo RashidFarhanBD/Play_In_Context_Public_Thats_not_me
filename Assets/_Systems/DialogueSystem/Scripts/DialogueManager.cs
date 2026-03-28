@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
+    [SerializeField] private GameObject _body;
     [SerializeField] private TMP_Text _dialogueTextRef;
     [SerializeField] private TMP_Text _penguinNameRef;
     [SerializeField] private Image _penguinAvatar;
@@ -11,6 +12,8 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private OptionButton[] _optionButtons;
 
     private DialogueNode currentNode;
+
+    public GameObject Body => _body;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class DialogueManager : Singleton<DialogueManager>
     void DisplayNode()
     {
         _dialogueTextRef.SetText(currentNode.Text);
-        _penguinNameRef.SetText(currentNode.PenguinId);
+        _penguinNameRef.SetText(currentNode.PenguinData.DisplayName);
 
         if (currentNode.Choices == null || currentNode.Choices.Count == 0)
         {
@@ -42,18 +45,11 @@ public class DialogueManager : Singleton<DialogueManager>
             if (i < currentNode.Choices.Count)
             {
                 var currentChoice = currentNode.Choices[i];
-                Debug.Log($"{currentChoice == null}");
                 var selectionIndex = i;
-                //var context = currentChoice.ToContext();
+                var context = currentChoice.ToContext();
 
-                var context = new OptionContext()
-                {
-                    OptionDisplayText = currentChoice.Text,
-                    IsLockedByDefault = currentChoice.IsLocked,
-                    PenguinDescription = currentChoice.IsLocked ? currentChoice.PenguinData?.VisualDescription : null,
-                };
-
-                currentButton.Initialize(context, ActionOnSelection);
+                currentButton.Initialize(context);
+                currentButton.OnButtonClicked += ActionOnSelection;
 
                 void ActionOnSelection()
                 {
@@ -69,8 +65,6 @@ public class DialogueManager : Singleton<DialogueManager>
 
     public void SelectChoice(int index)
     {
-        Debug.Log($"Selecting {index}");
-
         var choice = currentNode.Choices[index];
 
         if (choice.Events != null)

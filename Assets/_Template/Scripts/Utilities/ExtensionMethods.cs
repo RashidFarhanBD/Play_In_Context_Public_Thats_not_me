@@ -38,6 +38,11 @@ public static class StringExtensions
     {
         return value.Replace(" ", "_");
     }
+
+    public static string ToIdentifier(this string value)
+    {
+        return value.ToLower().SpacesToUnderline();
+    }
 }
 
 public static class VectorExtensions

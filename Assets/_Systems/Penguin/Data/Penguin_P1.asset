@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a018521e3b5334494027a9d2ecf42a, type: 3}
+  m_Name: Penguin_P1
+  m_EditorClassIdentifier: Assembly-CSharp::PenguinData
+  DisplayName: Jiggling Penguin
+  Username: jiggler_penguin23
+  Status: Would you like to jiggle?
+  followerCount: 230
+  VisualDescription: Red Glasses and Saxaphone
+  PenguinIcon: {fileID: 4875889249261805533, guid: b4878016560105b419746ef232778a7f, type: 3}

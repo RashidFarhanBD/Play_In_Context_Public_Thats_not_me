@@ -26,8 +26,8 @@ public class HintPanel : MonoBehaviour, IPointerDownHandler
     {
         gameObject.SetActive(true);
         var color = "yellow";
-        var displayText = $"<color={color}>{optionContext.OptionDisplayText}</color>";
-        var description = $"<color={color}>{optionContext.PenguinDescription}</color>";
+        var displayText = $"<color={color}>{optionContext.DisplayText}</color>";
+        var description = $"<color={color}>{optionContext.PenguinData.VisualDescription}</color>";
         var formattedString = string.Format(_textTemplate, displayText, description);
         _textRef.SetText(formattedString);
     }
