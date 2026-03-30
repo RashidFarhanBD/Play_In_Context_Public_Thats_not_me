@@ -5,9 +5,6 @@ using UnityEngine.UI;
 public class DialogueManager : Singleton<DialogueManager>
 {
     [SerializeField] private GameObject _body;
-    [SerializeField] private TMP_Text _dialogueTextRef;
-    [SerializeField] private TMP_Text _penguinNameRef;
-    [SerializeField] private Image _penguinAvatar;
     [SerializeField] private Dialogue _startDialogue;
     [SerializeField] private OptionButton[] _optionButtons;
 
@@ -28,8 +25,11 @@ public class DialogueManager : Singleton<DialogueManager>
 
     void DisplayNode()
     {
-        _dialogueTextRef.SetText(currentNode.Text);
-        _penguinNameRef.SetText(currentNode.PenguinData.DisplayName);
+        var author = currentNode.PenguinData.DisplayName;
+        var message = currentNode.Text;
+
+        ChatManager.Instance.SetChatTitle(author);
+        ChatManager.Instance.SendMessage(author, message, false);
 
         if (currentNode.Choices == null || currentNode.Choices.Count == 0)
         {
@@ -53,6 +53,9 @@ public class DialogueManager : Singleton<DialogueManager>
 
                 void ActionOnSelection()
                 {
+                    var responseMessage = context.DisplayText;
+                    ChatManager.Instance.SendMessage("You", responseMessage, true);
+
                     SelectChoice(selectionIndex);
                 }
             }

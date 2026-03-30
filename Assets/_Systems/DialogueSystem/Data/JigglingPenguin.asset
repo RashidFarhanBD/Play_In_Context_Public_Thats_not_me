@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JigglingPenguin
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
-  Text: My booty's jiggling. Can you help me?
+  Text: My booty's jiggling. #Can you help me?
   Choices:
   - Text: Sure, here I come!
     NextNode: {fileID: 11400000, guid: eb4e75d1376caad4e81e6d99c46b4e32, type: 2}
