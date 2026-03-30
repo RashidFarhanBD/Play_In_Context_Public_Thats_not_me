@@ -12,7 +12,14 @@ public class OptionButton : ContextButtonBase<OptionContext>
 
     public override void Initialize(OptionContext optionContext)
     {
-        base.Initialize(optionContext);
+        //base.Initialize(optionContext);
+
+        _context = optionContext;
+
+        if (LocalizationManager.Instance.TryGetText(_context.DisplayText, out var result))
+        {
+            _displayTextRef.SetText(result);
+        }
 
         gameObject.SetActive(true);
 

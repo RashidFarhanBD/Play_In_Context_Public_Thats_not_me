@@ -25,6 +25,14 @@ public class SearchPanel : Singleton<SearchPanel>
 
     public void RegisterPenguin(PenguinData penguin, Action ActionOnClick)
     {
+        var result = _penguinUnlockTable.TryAdd(penguin, false);
+
+        if (!result)
+        {
+            Debug.LogWarning($"No Duplicates please: {penguin.DisplayName}");
+            return;
+        }
+
         var context = penguin.ToContext();
         var profileButton = Instantiate(_penguinProfileButtonPrefab, _profilesParent);
 
@@ -32,8 +40,7 @@ public class SearchPanel : Singleton<SearchPanel>
         profileButton.OnButtonClicked += ActionOnClick;
         profileButton.OnButtonClicked += GeneralActionOnClick;
 
-        _penguinUnlockTable.Add(penguin, false);
-        _penguinButtonsTable.Add(penguin, profileButton);
+        _penguinButtonsTable.TryAdd(penguin, profileButton);
 
         profileButton.gameObject.SetActive(false);
 

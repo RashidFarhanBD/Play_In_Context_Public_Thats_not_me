@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
   FollowerCount: 123653
   DisplayName: Reel Freeze
-  Username: '@spoiler_alert_'
+  Username: spoiler_alert_
   Status: "\u201CIt's all conspiracies, until they turn out to be true #sheepOrPenguins\u201D"
   VisualDescription: 3D glasses (red/blue)
   PenguinIcon: {fileID: 21300000, guid: f21fd0b71a3cf6140adfa0480f53752c, type: 3}

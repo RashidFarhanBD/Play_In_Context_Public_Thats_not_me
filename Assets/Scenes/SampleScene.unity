@@ -926,6 +926,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24581382}
     m_Modifications:
+    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1113,7 +1121,6 @@ MonoBehaviour:
   _textTemplate: To {0} look for a penguin with {1}.
   _textRef: {fileID: 1993385016}
   _canvasGroup: {fileID: 451318519}
-  _panel: {fileID: 0}
 --- !u!225 &451318519
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1218,6 +1225,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &560242085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560242086}
+  - component: {fileID: 560242087}
+  - component: {fileID: 560242088}
+  m_Layer: 0
+  m_Name: Localization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560242086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560242085}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 775.75964, y: 934.0946, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560242087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560242085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb19d5c5c6eda1647b89ffb5a67bf405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSVReader
+  _localizationFile: {fileID: 4900000, guid: 6393f329ed2ba5c47aada0d872a2cb9c, type: 3}
+--- !u!114 &560242088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560242085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620765036109df84289e38cfd6f6b8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationManager
+  _csvReader: {fileID: 560242087}
+  _localizationSettings: {fileID: 11400000, guid: c29a6a4478ad7374a94f52ca02ef5b11, type: 2}
 --- !u!1 &721594230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1626,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24581382}
     m_Modifications:
+    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2290,6 +2365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   _body: {fileID: 198988640}
+  _delayBetweenMessage: 0
+  _firstMessage: player_1
   _startDialogue: {fileID: 11400000, guid: 4520a1a76288d7b42bbc007ef2a999ce, type: 2}
   _optionButtons:
   - {fileID: 1457575372}
@@ -2970,6 +3047,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24581382}
     m_Modifications:
+    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4253,3 +4338,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1477004299}
   - {fileID: 1128226321}
+  - {fileID: 560242086}

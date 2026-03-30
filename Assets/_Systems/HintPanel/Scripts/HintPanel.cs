@@ -8,7 +8,6 @@ public class HintPanel : MonoBehaviour, IPointerDownHandler
     [SerializeField, TextArea] private string _textTemplate;
     [SerializeField] private TMP_Text _textRef;
     [SerializeField] private CanvasGroup _canvasGroup;
-    [SerializeField] private Image _panel;
 
     void Awake()
     {

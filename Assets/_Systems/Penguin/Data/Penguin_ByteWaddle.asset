@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
   FollowerCount: 6767
   DisplayName: Byte Waddle
-  Username: '@404flipper'
+  Username: 404flipper
   Status: '"I could use some re-booting, so tired"'
   VisualDescription: Tech glasses
   PenguinIcon: {fileID: 21300000, guid: f21fd0b71a3cf6140adfa0480f53752c, type: 3}
