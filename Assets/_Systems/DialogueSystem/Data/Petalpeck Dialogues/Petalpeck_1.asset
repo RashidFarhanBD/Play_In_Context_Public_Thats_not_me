@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: Petalpeck_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
-  Text: blitsbeak_1
+  Text: petalpeck_1
   Choices:
-  - Text: blitsbeak_4_1
+  - Text: petalpeck_1_1
+    NextNode: {fileID: 0}
+    IsLocked: 0
+    PenguinData: {fileID: 0}
+    Events: []
+  - Text: petalpeck_1_2
     NextNode: {fileID: 0}
     IsLocked: 0
     PenguinData: {fileID: 0}

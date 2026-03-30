@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlitsBeak_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
-  Text: blitsbeak_1
+  Text: blitsbeak_2
   Choices:
   - Text: blitsbeak_2_1
     NextNode: {fileID: 0}

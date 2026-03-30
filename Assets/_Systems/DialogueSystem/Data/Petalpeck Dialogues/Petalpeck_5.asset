@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f3cbcafb7c7544eafa17132aad7b65, type: 3}
-  m_Name: BlitsBeak_3
+  m_Name: Petalpeck_5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
-  Text: blitsbeak_3
+  Text: petalpeck_1
   Choices:
-  - Text: blitsbeak_3_1
-    NextNode: {fileID: 11400000, guid: d05ce9694a11f604598aa2f48af7e4d0, type: 2}
+  - Text: petalpeck_5_1
+    NextNode: {fileID: 0}
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []
-  - Text: blitsbeak_3_2
+  - Text: petalpeck_5_2
     NextNode: {fileID: 0}
     IsLocked: 0
     PenguinData: {fileID: 0}
