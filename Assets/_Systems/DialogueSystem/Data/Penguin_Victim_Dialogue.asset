@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   DialogueID: 
   StartNode: {fileID: 11400000, guid: 91735fa026bba8a4fa14914f5327e060, type: 2}
-  Nodes:
-  - {fileID: 0}
+  Nodes: []

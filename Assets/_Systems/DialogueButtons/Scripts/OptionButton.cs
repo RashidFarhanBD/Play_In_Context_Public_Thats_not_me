@@ -1,8 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class OptionButton : ContextButtonBase<OptionContext>
 {
+    [SerializeField] private Image _buttonVisualRef;
+    [SerializeField] private Sprite _unlockedOptionImage;
+    [SerializeField] private Sprite _lockedOptionImage;
     [SerializeField] private GameObject _lockIcon;
     [SerializeField] private bool _isLocked;
 
@@ -24,6 +28,7 @@ public class OptionButton : ContextButtonBase<OptionContext>
 
     private void LockOption()
     {
+        _buttonVisualRef.sprite = _lockedOptionImage;
         _isLocked = true;
         _lockIcon.SetActive(true);
 
@@ -32,6 +37,7 @@ public class OptionButton : ContextButtonBase<OptionContext>
 
     private void UnlockOption()
     {
+        _buttonVisualRef.sprite = _unlockedOptionImage;
         _isLocked = false;
         _lockIcon.SetActive(false);
     }

@@ -1,16 +1,21 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChatBubble : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _authorTextRef;
+    [SerializeField] private Image _authorImageRef;
     [SerializeField] private TMP_Text _messageTextRef;
 
-    public GameObject AuthorText => _authorTextRef.gameObject;
+    public GameObject AuthorIcon => _authorImageRef.gameObject;
 
-    public void Initialize(string author, string message)
+    public void Initialize(Sprite authorIcon, string message)
     {
-        _authorTextRef.SetText(author);
+        if (authorIcon != null)
+        {
+            _authorImageRef.sprite = authorIcon;
+        }
+
         _messageTextRef.SetText(message);
     }
 }

@@ -1,13 +1,16 @@
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class ChatManager : Singleton<ChatManager>
 {
     [SerializeField] private Transform _chatBubbleParent;
     [SerializeField] private TMP_Text _chatTitleRef;
     [SerializeField] private ChatBubble _playerChatBubblePrefab;
     [SerializeField] private ChatBubble _otherChatBubblePrefab;
+
+    public event Action OnMessageSent;
 
     void Start()
     {
@@ -19,7 +22,7 @@ public class ChatManager : Singleton<ChatManager>
         _chatTitleRef.SetText(title);
     }
 
-    public void SendMessage(string author, string message, bool isPlayer)
+    public void SendMessage(Sprite authorIcon, string message, bool isPlayer)
     {
         var properPrefab = isPlayer ? _playerChatBubblePrefab : _otherChatBubblePrefab;
 
@@ -30,13 +33,17 @@ public class ChatManager : Singleton<ChatManager>
             var textPart = splitText[i];
 
             var chatBubble = Instantiate(properPrefab, _chatBubbleParent);
-            chatBubble.Initialize(author, textPart);
-            chatBubble.AuthorText.SetActive(i == 0);
+            chatBubble.Initialize(authorIcon, textPart);
+            chatBubble.AuthorIcon.SetActive(i == 0);
+
+            OnMessageSent?.Invoke();
         }
     }
 
     private void ClearChat()
     {
+        Debug.Log("Chat Cleared");
+
         var childCount = _chatBubbleParent.childCount;
 
         for (int i = childCount - 1; i >= 0; i--)

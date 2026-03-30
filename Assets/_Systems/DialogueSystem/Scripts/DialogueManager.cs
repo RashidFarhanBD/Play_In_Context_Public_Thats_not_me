@@ -1,4 +1,4 @@
-using TMPro;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,10 +7,23 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private GameObject _body;
     [SerializeField] private Dialogue _startDialogue;
     [SerializeField] private OptionButton[] _optionButtons;
+    [SerializeField] private ScrollRect _scrollRect;
+    [SerializeField] private RectTransform _messageContent;
 
     private DialogueNode currentNode;
 
     public GameObject Body => _body;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        ChatManager.Instance.OnMessageSent += FixScrollBar;
+    }
+
+    void OnDestroy()
+    {
+        ChatManager.Instance.OnMessageSent -= FixScrollBar;
+    }
 
     void Start()
     {
@@ -25,11 +38,13 @@ public class DialogueManager : Singleton<DialogueManager>
 
     void DisplayNode()
     {
-        var author = currentNode.PenguinData.DisplayName;
+        var penguinData = currentNode.PenguinData;
+        var penguinIcon = penguinData.PenguinIcon;
+        var author = penguinData.DisplayName;
         var message = currentNode.Text;
 
         ChatManager.Instance.SetChatTitle(author);
-        ChatManager.Instance.SendMessage(author, message, false);
+        ChatManager.Instance.SendMessage(penguinIcon, message, false);
 
         if (currentNode.Choices == null || currentNode.Choices.Count == 0)
         {
@@ -54,7 +69,8 @@ public class DialogueManager : Singleton<DialogueManager>
                 void ActionOnSelection()
                 {
                     var responseMessage = context.DisplayText;
-                    ChatManager.Instance.SendMessage("You", responseMessage, true);
+                    ChatManager.Instance.SendMessage(null, responseMessage, true);
+                    currentButton.OnButtonClicked -= ActionOnSelection;
 
                     SelectChoice(selectionIndex);
                 }
@@ -118,5 +134,12 @@ public class DialogueManager : Singleton<DialogueManager>
         {
             option.Deinitialize();
         }
+    }
+
+    private void FixScrollBar()
+    {
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_messageContent);
+        _scrollRect.verticalNormalizedPosition = 0f;
     }
 }

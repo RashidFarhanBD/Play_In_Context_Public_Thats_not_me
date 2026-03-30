@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: JigglingPenguin_a
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
-  Text: Thank you so much!
+  Text: 'Thank you so much! Thank you so much! Thank you so much! Thank you so much!
+    Thank you so much! Thank you so much! '
   Choices:
-  - Text: Jiggle
+  - Text: You are welcom girl! You are welcom girl! You are welcom girl!You are welcom
+      girl!
     NextNode: {fileID: 11400000, guid: 91735fa026bba8a4fa14914f5327e060, type: 2}
     IsLocked: 0
     PenguinData: {fileID: 0}
