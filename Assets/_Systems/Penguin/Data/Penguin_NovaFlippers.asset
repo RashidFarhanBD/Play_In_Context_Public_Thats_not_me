@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3a018521e3b5334494027a9d2ecf42a, type: 3}
-  m_Name: Penguin_P2
+  m_Name: Penguin_NovaFlippers
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
-  FollowerCount: 6056
-  DisplayName: Booty Penguin
-  Username: booty_penguin420
-  Status: Booty is good
-  VisualDescription: Big Booty
-  PenguinIcon: {fileID: -3124684917082729634, guid: c8d1dff80076cd3478c6b920b2706697, type: 3}
+  FollowerCount: 4568
+  DisplayName: Nova Flippers
+  Username: orbiting_ice
+  Status: "\u201CCurrently not on this planet.\u201D"
+  VisualDescription: Astronaut helmet
+  PenguinIcon: {fileID: 21300000, guid: 110451d702a96134dbc5f1177fdfdbd0, type: 3}

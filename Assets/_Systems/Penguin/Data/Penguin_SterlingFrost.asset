@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a018521e3b5334494027a9d2ecf42a, type: 3}
+  m_Name: Penguin_SterlingFrost
+  m_EditorClassIdentifier: Assembly-CSharp::PenguinData
+  FollowerCount: 78963
+  DisplayName: Sterling Frost
+  Username: dividendsdaily
+  Status: "\u201CTime is money. I waste neither.\u201D"
+  VisualDescription: a golden monocle
+  PenguinIcon: {fileID: 21300000, guid: 9f85ec8350835be408d6fff25a3c4e16, type: 3}

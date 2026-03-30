@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3a018521e3b5334494027a9d2ecf42a, type: 3}
-  m_Name: Penguin_P1
+  m_Name: _Penguin_
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
   FollowerCount: 0
-  DisplayName: Jiggling Penguin
-  Username: jiggler_penguin23
-  Status: Would you like to jiggle?
-  VisualDescription: Red Glasses and Saxaphone
-  PenguinIcon: {fileID: -3124684917082729634, guid: c8d1dff80076cd3478c6b920b2706697, type: 3}
+  DisplayName: 
+  Username: 
+  Status: 
+  VisualDescription: 
+  PenguinIcon: {fileID: 21300000, guid: f21fd0b71a3cf6140adfa0480f53752c, type: 3}

@@ -6,5 +6,4 @@ public class Dialogue : ScriptableObject
 {
     public string DialogueID;
     public DialogueNode StartNode;
-    public List<DialogueNode> Nodes;
 }
