@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Petalpeck_4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
-  Text: petalpeck_1
+  Text: petalpeck_4
   Choices:
   - Text: petalpeck_4_1
     NextNode: {fileID: 0}
