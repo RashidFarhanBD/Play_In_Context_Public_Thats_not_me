@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc05f019c884bee4f96cdce72ae70afc
+guid: 011e7a105734ed14284025f0e2d861e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5183756314255143157
-    second: bg4_0
+      213: -2151306012127607904
+    second: bakcground1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg4_0
+      name: bakcground1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 2400
+        width: 430
+        height: 628
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0f42aec8199f08b0800000000000000
-      internalID: -5183756314255143157
+      spriteID: 0a3c8ff74960522e0800000000000000
+      internalID: -2151306012127607904
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bg4_0: -5183756314255143157
+      bakcground1_0: -2151306012127607904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
