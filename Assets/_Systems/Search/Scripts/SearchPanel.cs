@@ -68,6 +68,8 @@ public class SearchPanel : Singleton<SearchPanel>
     {
         _penguinUnlockTable[penguin] = true;
 
+        _inputField.text = string.Empty;
+
         Destroy(_penguinButtonsTable[penguin].gameObject);
     }
 
@@ -77,14 +79,13 @@ public class SearchPanel : Singleton<SearchPanel>
 
         var lockedPenguins = _penguinUnlockTable.Where((x) => x.Value == false);
 
-
         foreach (var lockedPenguin in lockedPenguins)
         {
             var penguin = lockedPenguin.Key;
 
             Debug.Log($"{penguin.ID} -------------- {formattedInput}");
 
-            var show = penguin.ID == formattedInput || penguin.ID == "@" + formattedInput;
+            var show = penguin.ID == formattedInput || "@" + penguin.ID == formattedInput;
 
             _penguinButtonsTable[penguin].gameObject.SetActive(show);
         }
