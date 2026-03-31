@@ -30,30 +30,45 @@ public class SearchPanel : Singleton<SearchPanel>
         if (!result)
         {
             Debug.LogWarning($"No Duplicates please: {penguin.DisplayName}");
+
+            var existingButton = _penguinButtonsTable[penguin];
+            HandleButton(existingButton);
             return;
         }
+
+
 
         var context = penguin.ToContext();
         var profileButton = Instantiate(_penguinProfileButtonPrefab, _profilesParent);
 
         profileButton.Initialize(context);
-        profileButton.OnButtonClicked += ActionOnClick;
-        profileButton.OnButtonClicked += GeneralActionOnClick;
+
+        HandleButton(profileButton);
 
         _penguinButtonsTable.TryAdd(penguin, profileButton);
 
         profileButton.gameObject.SetActive(false);
 
+        Debug.Log($"PENGUIN REGISTERED: {penguin.Username}");
+
         void GeneralActionOnClick()
         {
-            profileButton.gameObject.SetActive(false);
+            _penguinButtonsTable[penguin].gameObject.SetActive(false);
             UnlockPenguin(penguin);
+        }
+
+        void HandleButton(PenguinProfileButton penguinProfileButton)
+        {
+            penguinProfileButton.OnButtonClicked += ActionOnClick;
+            penguinProfileButton.OnButtonClicked += GeneralActionOnClick;
         }
     }
 
     private void UnlockPenguin(PenguinData penguin)
     {
         _penguinUnlockTable[penguin] = true;
+
+        Destroy(_penguinButtonsTable[penguin].gameObject);
     }
 
     private void CheckInput(string input)
@@ -62,11 +77,14 @@ public class SearchPanel : Singleton<SearchPanel>
 
         var lockedPenguins = _penguinUnlockTable.Where((x) => x.Value == false);
 
+
         foreach (var lockedPenguin in lockedPenguins)
         {
             var penguin = lockedPenguin.Key;
 
-            var show = penguin.ID == formattedInput;
+            Debug.Log($"{penguin.ID} -------------- {formattedInput}");
+
+            var show = penguin.ID == formattedInput || penguin.ID == "@" + formattedInput;
 
             _penguinButtonsTable[penguin].gameObject.SetActive(show);
         }

@@ -42,6 +42,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
     void DisplayNode()
     {
+        Debug.LogWarning($"starting {currentNode.Text}");
+        DeinitializeAll();
         var penguinData = currentNode.PenguinData;
         var penguinIcon = penguinData.PenguinIcon;
         var author = penguinData.DisplayName;
@@ -52,8 +54,6 @@ public class DialogueManager : Singleton<DialogueManager>
 
         if (currentNode.Choices == null || currentNode.Choices.Count == 0)
         {
-            DeinitializeAll();
-
             Continue();
 
             return;

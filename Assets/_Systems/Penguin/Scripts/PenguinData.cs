@@ -11,5 +11,5 @@ public class PenguinData : ScriptableObject
     [TextArea] public string VisualDescription;
     public Sprite PenguinIcon;
 
-    public string ID => DisplayName.ToIdentifier();
+    public string ID => Username.ToIdentifier();
 }

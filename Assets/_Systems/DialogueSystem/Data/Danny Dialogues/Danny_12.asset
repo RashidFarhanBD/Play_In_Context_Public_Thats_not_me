@@ -17,7 +17,7 @@ MonoBehaviour:
   Choices:
   - Text: reelfreeze_4_1
     NextNode: {fileID: 11400000, guid: 93b9ddf3be1a21a499cd7390932f4809, type: 2}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
+    IsLocked: 1
+    PenguinData: {fileID: 11400000, guid: b4c68b0f2e28bd64cb0045927569f4a3, type: 2}
     Events: []
   NextNode: {fileID: 0}

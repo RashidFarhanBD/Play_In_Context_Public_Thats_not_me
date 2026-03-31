@@ -153,7 +153,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 447.304}
+  m_SizeDelta: {x: 184.2438, y: 447.304}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &24581381
 GameObject:
@@ -192,7 +192,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -43.299988}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &24581383
@@ -210,10 +210,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 28
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: -18
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -926,14 +926,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24581382}
     m_Modifications:
-    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.100006
-      objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -964,7 +956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1118,7 +1110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefc842ab91a99d4ea354562f76d1e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HintPanel
-  _textTemplate: To {0} look for a penguin with {1}.
+  _textTemplate: To <color=yellow>UNLOCK </color> this option add a penguin with
+    {0} to friends list.
   _textRef: {fileID: 1993385016}
   _canvasGroup: {fileID: 451318519}
 --- !u!225 &451318519
@@ -1626,14 +1619,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24581382}
     m_Modifications:
-    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.100006
-      objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1664,7 +1649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3047,14 +3032,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 24581382}
     m_Modifications:
-    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710417385033935875, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.100006
-      objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3085,7 +3062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3788989858086239962, guid: 8180821ecee7bd9469e36218ebd218e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3915,7 +3892,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -577}
-  m_SizeDelta: {x: 0, y: 171.93103}
+  m_SizeDelta: {x: 0, y: 210.93}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &2065801296
 PrefabInstance:
