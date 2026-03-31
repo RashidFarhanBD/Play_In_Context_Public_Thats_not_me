@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -33,6 +34,30 @@ public class ChatManager : Singleton<ChatManager>
             //Turn to coroutine
             for (int i = 0; i < splitText.Length; i++)
             {
+                var textPart = splitText[i];
+
+                var chatBubble = Instantiate(properPrefab, _chatBubbleParent);
+                chatBubble.Initialize(authorIcon, textPart);
+                chatBubble.AuthorIcon.SetActive(!isPlayer && i == 0);
+
+                OnMessageSent?.Invoke();
+            }
+        }
+    }
+
+    public IEnumerator SendMessageCoroutine(Sprite authorIcon, string message, bool isPlayer)
+    {
+        var properPrefab = isPlayer ? _playerChatBubblePrefab : _otherChatBubblePrefab;
+
+        if (LocalizationManager.Instance.TryGetText(message, out var text))
+        {
+            var splitText = text.Split("%");
+
+            //Turn to coroutine
+            for (int i = 0; i < splitText.Length; i++)
+            {
+                yield return DialogueManager.Instance.DelayBetweenMessage;
+
                 var textPart = splitText[i];
 
                 var chatBubble = Instantiate(properPrefab, _chatBubbleParent);
