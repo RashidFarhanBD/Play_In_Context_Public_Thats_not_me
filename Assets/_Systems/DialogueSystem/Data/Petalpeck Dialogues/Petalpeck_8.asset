@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f3cbcafb7c7544eafa17132aad7b65, type: 3}
   m_Name: Petalpeck_8
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
+  PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
   Text: petalpeck_8
   Choices:
   - Text: endgame

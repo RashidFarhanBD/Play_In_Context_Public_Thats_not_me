@@ -16,8 +16,8 @@ MonoBehaviour:
   Text: danny_6
   Choices:
   - Text: danny_6_1
-    NextNode: {fileID: 0}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: f970fddba9807074096125e397798c3a, type: 2}
+    IsLocked: 1
+    PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
     Events: []
   NextNode: {fileID: 0}

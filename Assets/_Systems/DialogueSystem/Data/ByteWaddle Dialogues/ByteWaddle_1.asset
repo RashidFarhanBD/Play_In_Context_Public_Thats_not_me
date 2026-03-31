@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f3cbcafb7c7544eafa17132aad7b65, type: 3}
   m_Name: ByteWaddle_1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
+  PenguinData: {fileID: 11400000, guid: 0d6717c6672b3454a89ed88baa414b59, type: 2}
   Text: bytewaddle_1
   Choices:
   - Text: bytewaddle_1_1
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 4c202482195115f489a260c62ee582b9, type: 2}
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []

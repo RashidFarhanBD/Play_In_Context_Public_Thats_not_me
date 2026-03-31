@@ -16,12 +16,12 @@ MonoBehaviour:
   Text: danny_3
   Choices:
   - Text: danny_2_1
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 3ddd110a28c057f4db4325f0e042289c, type: 2}
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []
   - Text: danny_2_2
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 9e5f799f6a37c0643bbd78ff25b22200, type: 2}
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []

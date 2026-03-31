@@ -16,13 +16,13 @@ MonoBehaviour:
   Text: reelfreeze_6
   Choices:
   - Text: reelfreeze_6_1
-    NextNode: {fileID: 0}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 1806c7ec5409bbf45ae127f04b3c7458, type: 2}
+    IsLocked: 1
+    PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
     Events: []
   - Text: reelfreeze_6_2
-    NextNode: {fileID: 0}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 1806c7ec5409bbf45ae127f04b3c7458, type: 2}
+    IsLocked: 1
+    PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
     Events: []
   NextNode: {fileID: 0}

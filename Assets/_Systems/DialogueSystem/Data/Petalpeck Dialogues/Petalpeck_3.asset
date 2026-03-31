@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f3cbcafb7c7544eafa17132aad7b65, type: 3}
   m_Name: Petalpeck_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  PenguinData: {fileID: 11400000, guid: 6deb3ae85e4a51349847cd85103d5fa2, type: 2}
+  PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
   Text: petalpeck_3
   Choices:
   - Text: petalpeck_3_1
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 32c9cb5dc6066fd48a0d29eaf9f43a20, type: 2}
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []
   - Text: petalpeck_3_2
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 29e3ddd206142404598ee9ba602f1e11, type: 2}
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []
