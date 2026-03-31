@@ -194,6 +194,8 @@ MonoBehaviour:
   _usernameTextRef: {fileID: 1793152337465010589}
   _followerCounterTextRef: {fileID: 0}
   _penguinAvatar: {fileID: 8380536218475675018}
+  _plusButton: {fileID: 0}
+  _onlineIcon: {fileID: 0}
 --- !u!1 &4709923220052847906
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class SearchPanel : Singleton<SearchPanel>
     [SerializeField] private GameObject _body;
     [SerializeField] private TMPro.TMP_InputField _inputField;
     [SerializeField] private Transform _profilesParent;
+    [SerializeField] private Transform _friendsParent;
     [SerializeField] private PenguinProfileButton _penguinProfileButtonPrefab;
     [SerializeField] private string[] _unlockedPenguins;
 
@@ -53,7 +54,6 @@ public class SearchPanel : Singleton<SearchPanel>
 
         void GeneralActionOnClick()
         {
-            _penguinButtonsTable[penguin].gameObject.SetActive(false);
             UnlockPenguin(penguin);
         }
 
@@ -70,7 +70,13 @@ public class SearchPanel : Singleton<SearchPanel>
 
         _inputField.text = string.Empty;
 
-        Destroy(_penguinButtonsTable[penguin].gameObject);
+        var correspondingButton = _penguinButtonsTable[penguin];
+
+        var buttonTransform = correspondingButton.transform;
+        buttonTransform.SetParent(_friendsParent);
+        buttonTransform.SetAsFirstSibling();
+
+        //Destroy(_penguinButtonsTable[penguin].gameObject);
     }
 
     private void CheckInput(string input)

@@ -69,7 +69,7 @@ public class ChatManager : Singleton<ChatManager>
         }
     }
 
-    private void ClearChat()
+    public void ClearChat()
     {
         var childCount = _chatBubbleParent.childCount;
 

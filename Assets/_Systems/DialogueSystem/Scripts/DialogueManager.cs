@@ -102,6 +102,11 @@ public class DialogueManager : Singleton<DialogueManager>
                     ChatManager.Instance.SendMessage(null, responseMessage, true);
                     currentButton.OnButtonClicked -= ActionOnSelection;
 
+                    if (context.IsLockedByDefault)
+                    {
+                        ChatManager.Instance.ClearChat();
+                    }
+
                     SelectChoice(selectionIndex);
                 }
             }
