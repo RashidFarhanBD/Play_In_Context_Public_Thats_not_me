@@ -2,6 +2,13 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+public enum EndingType
+{
+    None,
+    Good,
+    Bad
+}
+
 [CreateAssetMenu(menuName = "ScriptableObjects/DialogueSystem/Node")]
 public class DialogueNode : ScriptableObject
 {
@@ -12,7 +19,10 @@ public class DialogueNode : ScriptableObject
 
     public List<DialogueChoice> Choices;
 
+    public EndingType EndingType = EndingType.None;
+
     public DialogueNode NextNode;
+
 
     [Button("Jiggle")]
     public void QuickId()

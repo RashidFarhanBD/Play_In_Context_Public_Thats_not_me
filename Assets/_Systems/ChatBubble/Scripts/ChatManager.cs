@@ -37,7 +37,7 @@ public class ChatManager : Singleton<ChatManager>
 
                 var chatBubble = Instantiate(properPrefab, _chatBubbleParent);
                 chatBubble.Initialize(authorIcon, textPart);
-                chatBubble.AuthorIcon.SetActive(i == 0);
+                chatBubble.AuthorIcon.SetActive(!isPlayer && i == 0);
 
                 OnMessageSent?.Invoke();
             }

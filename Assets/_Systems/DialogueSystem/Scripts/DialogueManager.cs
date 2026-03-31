@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,6 +50,14 @@ public class DialogueManager : Singleton<DialogueManager>
 
         ChatManager.Instance.SetChatTitle(author);
         ChatManager.Instance.SendMessage(penguinIcon, message, false);
+
+        if (currentNode.EndingType == EndingType.Good ||
+        currentNode.EndingType == EndingType.Bad)
+        {
+            GameEvent.RaiseEndgameTriggeredEvent(currentNode.EndingType);
+
+            return;
+        }
 
         if (currentNode.Choices == null || currentNode.Choices.Count == 0)
         {
