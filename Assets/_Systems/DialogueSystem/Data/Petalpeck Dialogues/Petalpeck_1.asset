@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f3cbcafb7c7544eafa17132aad7b65, type: 3}
+  m_Name: Petalpeck_1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  PenguinData: {fileID: 11400000, guid: 912d9b2d464ab324c86ff840cf0bceb5, type: 2}
+  Text: petalpeck_1
+  Choices:
+  - Text: petalpeck_1_1
+    NextNode: {fileID: 11400000, guid: 7c7be98a5c3fe084dbbec3db583978ed, type: 2}
+    IsLocked: 0
+    PenguinData: {fileID: 0}
+    Events: []
+  - Text: petalpeck_1_2
+    NextNode: {fileID: 11400000, guid: 9191b875f3170df4d972923a22607d47, type: 2}
+    IsLocked: 0
+    PenguinData: {fileID: 0}
+    Events: []
+  NextNode: {fileID: 0}

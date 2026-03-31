@@ -26,24 +26,26 @@ public class ChatManager : Singleton<ChatManager>
     {
         var properPrefab = isPlayer ? _playerChatBubblePrefab : _otherChatBubblePrefab;
 
-        var splitText = message.Split("#");
-
-        for (int i = 0; i < splitText.Length; i++)
+        if (LocalizationManager.Instance.TryGetText(message, out var text))
         {
-            var textPart = splitText[i];
+            var splitText = text.Split("%");
 
-            var chatBubble = Instantiate(properPrefab, _chatBubbleParent);
-            chatBubble.Initialize(authorIcon, textPart);
-            chatBubble.AuthorIcon.SetActive(i == 0);
+            //Turn to coroutine
+            for (int i = 0; i < splitText.Length; i++)
+            {
+                var textPart = splitText[i];
 
-            OnMessageSent?.Invoke();
+                var chatBubble = Instantiate(properPrefab, _chatBubbleParent);
+                chatBubble.Initialize(authorIcon, textPart);
+                chatBubble.AuthorIcon.SetActive(i == 0);
+
+                OnMessageSent?.Invoke();
+            }
         }
     }
 
     private void ClearChat()
     {
-        Debug.Log("Chat Cleared");
-
         var childCount = _chatBubbleParent.childCount;
 
         for (int i = childCount - 1; i >= 0; i--)

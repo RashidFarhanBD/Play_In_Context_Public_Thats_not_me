@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a018521e3b5334494027a9d2ecf42a, type: 3}
   m_Name: Penguin_YukonWrangler
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
-  FollowerCount: 0
+  FollowerCount: 25656
   DisplayName: Yukon Wrangler
   Username: wideopenice
   Status: "\u201CSeen things out here. Mostly snow.\u201D"

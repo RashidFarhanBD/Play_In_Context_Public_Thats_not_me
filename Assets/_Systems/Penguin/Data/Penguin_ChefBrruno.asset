@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
   FollowerCount: 58
   DisplayName: Chef Brruno
-  Username: '@burnt_then_perfect'
+  Username: burnt_then_perfect
   Status: "\u201CYes I meant to do that.\u201D"
   VisualDescription: Pot as a hat, ladle
   PenguinIcon: {fileID: 21300000, guid: c67afcf65d33e684ab57980083f15e9e, type: 3}

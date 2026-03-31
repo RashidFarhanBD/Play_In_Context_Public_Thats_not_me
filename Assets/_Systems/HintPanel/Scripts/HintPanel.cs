@@ -8,7 +8,6 @@ public class HintPanel : MonoBehaviour, IPointerDownHandler
     [SerializeField, TextArea] private string _textTemplate;
     [SerializeField] private TMP_Text _textRef;
     [SerializeField] private CanvasGroup _canvasGroup;
-    [SerializeField] private Image _panel;
 
     void Awake()
     {
@@ -30,9 +29,9 @@ public class HintPanel : MonoBehaviour, IPointerDownHandler
         ShowPanel();
 
         var color = "yellow";
-        var displayText = $"<color={color}>{optionContext.DisplayText}</color>";
+        //var displayText = $"<color={color}>{optionContext.DisplayText}</color>";
         var description = $"<color={color}>{optionContext.PenguinData.VisualDescription}</color>";
-        var formattedString = string.Format(_textTemplate, displayText, description);
+        var formattedString = string.Format(_textTemplate, description);
 
         _textRef.SetText(formattedString);
     }

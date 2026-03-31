@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Penguin_Victim_Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   DialogueID: 
-  StartNode: {fileID: 11400000, guid: 91735fa026bba8a4fa14914f5327e060, type: 2}
-  Nodes: []
+  StartNode: {fileID: 11400000, guid: 5ee4218be05bec2489a38076a0ed1335, type: 2}

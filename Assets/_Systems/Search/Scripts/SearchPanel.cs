@@ -25,28 +25,52 @@ public class SearchPanel : Singleton<SearchPanel>
 
     public void RegisterPenguin(PenguinData penguin, Action ActionOnClick)
     {
+        var result = _penguinUnlockTable.TryAdd(penguin, false);
+
+        if (!result)
+        {
+            Debug.LogWarning($"No Duplicates please: {penguin.DisplayName}");
+
+            var existingButton = _penguinButtonsTable[penguin];
+            HandleButton(existingButton);
+            return;
+        }
+
+
+
         var context = penguin.ToContext();
         var profileButton = Instantiate(_penguinProfileButtonPrefab, _profilesParent);
 
         profileButton.Initialize(context);
-        profileButton.OnButtonClicked += ActionOnClick;
-        profileButton.OnButtonClicked += GeneralActionOnClick;
 
-        _penguinUnlockTable.Add(penguin, false);
-        _penguinButtonsTable.Add(penguin, profileButton);
+        HandleButton(profileButton);
+
+        _penguinButtonsTable.TryAdd(penguin, profileButton);
 
         profileButton.gameObject.SetActive(false);
 
+        Debug.Log($"PENGUIN REGISTERED: {penguin.Username}");
+
         void GeneralActionOnClick()
         {
-            profileButton.gameObject.SetActive(false);
+            _penguinButtonsTable[penguin].gameObject.SetActive(false);
             UnlockPenguin(penguin);
+        }
+
+        void HandleButton(PenguinProfileButton penguinProfileButton)
+        {
+            penguinProfileButton.OnButtonClicked += ActionOnClick;
+            penguinProfileButton.OnButtonClicked += GeneralActionOnClick;
         }
     }
 
     private void UnlockPenguin(PenguinData penguin)
     {
         _penguinUnlockTable[penguin] = true;
+
+        _inputField.text = string.Empty;
+
+        Destroy(_penguinButtonsTable[penguin].gameObject);
     }
 
     private void CheckInput(string input)
@@ -59,7 +83,9 @@ public class SearchPanel : Singleton<SearchPanel>
         {
             var penguin = lockedPenguin.Key;
 
-            var show = penguin.ID == formattedInput;
+            Debug.Log($"{penguin.ID} -------------- {formattedInput}");
+
+            var show = penguin.ID == formattedInput || "@" + penguin.ID == formattedInput;
 
             _penguinButtonsTable[penguin].gameObject.SetActive(show);
         }

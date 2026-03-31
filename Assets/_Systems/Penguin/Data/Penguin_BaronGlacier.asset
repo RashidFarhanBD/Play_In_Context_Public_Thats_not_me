@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenguinData
   FollowerCount: 369
   DisplayName: Baron Glacier
-  Username: '@northpole.ceo'
+  Username: northpole.ceo
   Status: "\u201CI don\u2019t work. I own.\u201D"
   VisualDescription: a black top hat
   PenguinIcon: {fileID: 21300000, guid: 1e7e84c3ea456df4289a4dbbe8387f16, type: 3}
