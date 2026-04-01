@@ -25,9 +25,5 @@ MonoBehaviour:
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []
-  - Text: danny_1_3
-    NextNode: {fileID: 11400000, guid: 0b1c931e3bd9e594a91e1159b5aef373, type: 2}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
-    Events: []
+  EndingType: 0
   NextNode: {fileID: 0}

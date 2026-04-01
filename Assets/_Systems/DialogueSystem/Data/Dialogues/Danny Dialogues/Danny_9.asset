@@ -15,11 +15,6 @@ MonoBehaviour:
   PenguinData: {fileID: 11400000, guid: 136388c2624b8e543ae9ad9bdbbec7bd, type: 2}
   Text: danny_9
   Choices:
-  - Text: danny_9_1
-    NextNode: {fileID: 11400000, guid: ff30007a77b28d049803ce84493779f5, type: 2}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
-    Events: []
   - Text: danny_9_2
     NextNode: {fileID: 11400000, guid: aad1c161203d29044aa509b3da711608, type: 2}
     IsLocked: 0
@@ -30,4 +25,5 @@ MonoBehaviour:
     IsLocked: 0
     PenguinData: {fileID: 0}
     Events: []
+  EndingType: 0
   NextNode: {fileID: 0}

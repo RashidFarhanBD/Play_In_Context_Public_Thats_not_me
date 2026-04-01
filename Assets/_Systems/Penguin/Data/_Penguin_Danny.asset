@@ -17,4 +17,4 @@ MonoBehaviour:
   Username: danny.n
   Status: xxx
   VisualDescription: XXX
-  PenguinIcon: {fileID: -7622348782347274359, guid: 5950e340d66ddc24e942ce63ca770d53, type: 3}
+  PenguinIcon: {fileID: 21300000, guid: 1e7e84c3ea456df4289a4dbbe8387f16, type: 3}

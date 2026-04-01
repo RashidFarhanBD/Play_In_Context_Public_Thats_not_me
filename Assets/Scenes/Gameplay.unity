@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Party Penguin
+  m_text: Danny
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   _body: {fileID: 198988640}
-  _delayBetweenMessage: 2.3
+  _delayBetweenMessage: 1
   _firstMessage: player_1
   _startDialogue: {fileID: 11400000, guid: 4520a1a76288d7b42bbc007ef2a999ce, type: 2}
   _optionButtons:
