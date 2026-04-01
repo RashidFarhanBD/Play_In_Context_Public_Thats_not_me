@@ -69,6 +69,7 @@ public class SearchPanel : Singleton<SearchPanel>
         _inputField.text = string.Empty;
 
         var correspondingButton = _penguinButtonsTable[penguin];
+        correspondingButton.Deinitialize();
 
         var buttonTransform = correspondingButton.transform;
         buttonTransform.SetParent(_friendsParent);
