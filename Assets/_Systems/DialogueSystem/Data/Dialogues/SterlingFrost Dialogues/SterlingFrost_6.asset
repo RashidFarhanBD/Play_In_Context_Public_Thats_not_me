@@ -22,7 +22,8 @@ MonoBehaviour:
     Events: []
   - Text: sterlingfrost_6_2
     NextNode: {fileID: 11400000, guid: c704a59aae75863489087345d84622a6, type: 2}
-    IsLocked: 0
+    IsLocked: 1
     PenguinData: {fileID: 11400000, guid: 0d6717c6672b3454a89ed88baa414b59, type: 2}
     Events: []
+  EndingType: 0
   NextNode: {fileID: 0}
