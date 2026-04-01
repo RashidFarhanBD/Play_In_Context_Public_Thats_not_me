@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   _body: {fileID: 198988640}
-  _delayBetweenMessage: 0.1
+  _delayBetweenMessage: 2.3
   _firstMessage: player_1
   _startDialogue: {fileID: 11400000, guid: 4520a1a76288d7b42bbc007ef2a999ce, type: 2}
   _optionButtons:
