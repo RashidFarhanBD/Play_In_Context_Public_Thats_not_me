@@ -4914,7 +4914,7 @@ MonoBehaviour:
   _successText: {fileID: 6869908573689208816}
   _lastMessageText: {fileID: 298575083943139811}
   _fadeTime: 1
-  _fadeDelay: 4
+  _fadeDelay: 3.5
   _textFadeTime: 2
   _fadeEase: 4
 --- !u!222 &2568144201099940308
