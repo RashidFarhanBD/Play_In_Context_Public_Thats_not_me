@@ -50,8 +50,6 @@ public class SearchPanel : Singleton<SearchPanel>
 
         profileButton.gameObject.SetActive(false);
 
-        Debug.Log($"PENGUIN REGISTERED: {penguin.Username}");
-
         void GeneralActionOnClick()
         {
             UnlockPenguin(penguin);
@@ -75,8 +73,6 @@ public class SearchPanel : Singleton<SearchPanel>
         var buttonTransform = correspondingButton.transform;
         buttonTransform.SetParent(_friendsParent);
         buttonTransform.SetAsFirstSibling();
-
-        //Destroy(_penguinButtonsTable[penguin].gameObject);
     }
 
     private void CheckInput(string input)
@@ -88,8 +84,6 @@ public class SearchPanel : Singleton<SearchPanel>
         foreach (var lockedPenguin in lockedPenguins)
         {
             var penguin = lockedPenguin.Key;
-
-            Debug.Log($"{penguin.ID} -------------- {formattedInput}");
 
             var show = penguin.ID == formattedInput || "@" + penguin.ID == formattedInput;
 

@@ -8,15 +8,16 @@ public class LanguageButton : ButtonBase
     public override void OnPointerClick(PointerEventData eventData)
     {
         LocalizationManager.Instance.LocalizationSettings.AppLanguage = _setLanguage;
+        RaiseButtonClickedEvent();
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        RaiseButtonPressedEvent();
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        RaiseButtonReleasedEvent();
     }
 }

@@ -55,8 +55,6 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         DeinitializeAll();
 
-        Debug.LogWarning($"starting {currentNode.Text}");
-
         var penguinData = currentNode.PenguinData;
         var penguinIcon = penguinData.PenguinIcon;
         var author = penguinData.DisplayName;
