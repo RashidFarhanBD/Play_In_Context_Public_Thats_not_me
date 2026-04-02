@@ -14,10 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   PenguinData: {fileID: 11400000, guid: 23e687b201464554a9320daff867116a, type: 2}
   Text: novaflippers_5
-  Choices:
-  - Text: endgame
-    NextNode: {fileID: 0}
-    IsLocked: 0
-    PenguinData: {fileID: 0}
-    Events: []
+  Choices: []
+  EndingType: 2
   NextNode: {fileID: 0}
